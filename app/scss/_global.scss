@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  background: url(/images/bg-pattern-top-mobile.svg) top no-repeat,
+    url(/images/bg-pattern-bottom-mobile.svg) bottom no-repeat;
+
+  @include respond-to(desktop) {
+    background: url(/images/bg-pattern-top-desktop.svg) left top no-repeat,
+      url(/images/bg-pattern-bottom-desktop.svg) right bottom no-repeat;
+  }
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}

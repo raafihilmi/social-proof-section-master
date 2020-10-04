@@ -1,0 +1,217 @@
+.flex {
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 100vh;
+      overflow: hidden;
+      padding: 5rem;
+    }
+  }
+  &__text {
+    @include respond-to(desktop) {
+      width: 40vw;
+    }
+    h1 {
+      text-align: center;
+      padding: 2rem;
+      padding-bottom: 0;
+      margin-top: 2rem;
+      color: $primary1;
+
+      @include respond-to(desktop) {
+        font-size: 3rem;
+        text-align: left;
+        padding: 1rem;
+        padding-top: 0;
+        padding-right: 0;
+        margin-top: 0;
+      }
+    }
+    p {
+      text-align: center;
+      line-height: 1.7;
+      padding: 1rem;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: $neutral1;
+
+      @include respond-to(desktop) {
+        text-align: left;
+        padding-top: 0;
+        padding-right: 3rem;
+      }
+    }
+  }
+  &__review {
+    @include respond-to(desktop) {
+      width: 40vw;
+    }
+    .content {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 1rem 1rem;
+      background-color: $neutral2;
+      border-radius: 9px;
+      margin: 0 16px;
+
+      @include respond-to(desktop) {
+        // position: absolute;
+        flex-direction: row;
+        text-align: center;
+        padding: 0.8rem 1.5rem;
+        width: 95%;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+
+        &:nth-child(2) {
+          width: 100%;
+          margin-left: 3rem;
+          margin-right: 0;
+        }
+
+        &:last-child {
+          width: 100%;
+          margin-right: 0;
+          margin-left: 6rem;
+          margin-bottom: 0;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+      .stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        @include respond-to(desktop) {
+          margin-bottom: 0;
+        }
+
+        img {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+      .rated {
+        h4 {
+          color: $primary1;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__testimonial {
+    @include respond-to(desktop) {
+      display: flex;
+      flex-direction: row;
+    }
+    .card {
+      padding: 2rem 1rem;
+      margin: 0 1rem;
+      border-radius: 1rem;
+      background-color: $primary1;
+      // &:not(:last-child) {
+      //   margin-bottom: 1rem;
+      // }
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+      &:nth-child(2) {
+        margin-bottom: 1rem;
+      }
+      &:last-child {
+        margin-bottom: 4rem;
+
+        @include respond-to(desktop) {
+          margin-bottom: 1rem;
+        }
+      }
+      @include respond-to(desktop) {
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+        &:nth-child(2) {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        &:last-child {
+          margin-top: 2rem;
+          margin-bottom: 0;
+        }
+      }
+
+      .profile {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin: 0 1rem;
+
+        .image {
+          width: 2.5rem;
+          height: 2.5rem;
+          background-image: url(/images/image-colton.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 50%;
+        }
+        .image2 {
+          width: 2.5rem;
+          height: 2.5rem;
+          background-image: url(/images/image-irene.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 50%;
+        }
+        .image3 {
+          width: 2.5rem;
+          height: 2.5rem;
+          background-image: url(/images/image-anne.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 50%;
+        }
+        .person {
+          margin-left: 1.3rem;
+        }
+        .name {
+          color: $neutral3;
+        }
+        .job {
+          color: $primary2;
+        }
+      }
+      p {
+        margin: 0 1rem;
+        margin-top: 1.5rem;
+        color: $neutral3;
+        line-height: 1.7;
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: $neutral2;
+
+        @include respond-to(desktop) {
+          // margin-right: 0;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
